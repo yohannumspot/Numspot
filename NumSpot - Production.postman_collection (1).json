@@ -1,0 +1,1556 @@
+{
+	"info": {
+		"_postman_id": "aa037d77-8495-4ad3-b1d1-129adb518774",
+		"name": "NumSpot - Production",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43761155",
+		"_collection_link": "https://numspot-presales.postman.co/workspace/Numspot-PreSales~666eb3b9-e1fb-4d0e-b02d-9372246fca09/collection/30366112-aa037d77-8495-4ad3-b1d1-129adb518774?action=share&source=collection_link&creator=43761155"
+	},
+	"item": [
+		{
+			"name": "ClientGateway",
+			"item": [
+				{
+					"name": "CreateCGW",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"bgpAsn\": 65000,\n  \"connectionType\": \"ipsec.1\",\n  \"publicIp\": \"51.158.99.5\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ENDPOINT}}/connectivity/spaces/{{SPACE_ID}}/clientGateways",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"connectivity",
+								"spaces",
+								"{{SPACE_ID}}",
+								"clientGateways"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCGW",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ENDPOINT}}/connectivity/spaces/{{SPACE_ID}}/clientGateways/{{CLIENT_GATEWAY_ID}}",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"connectivity",
+								"spaces",
+								"{{SPACE_ID}}",
+								"clientGateways",
+								"{{CLIENT_GATEWAY_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListCGW",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ENDPOINT}}/connectivity/spaces/{{SPACE_ID}}/clientGateways",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"connectivity",
+								"spaces",
+								"{{SPACE_ID}}",
+								"clientGateways"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VirtualGateway",
+			"item": [
+				{
+					"name": "CreateVGW",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"connectionType\": \"ipsec.1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ENDPOINT}}/connectivity/spaces/{{SPACE_ID}}/virtualGateways",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"connectivity",
+								"spaces",
+								"{{SPACE_ID}}",
+								"virtualGateways"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListVGW",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ENDPOINT}}/connectivity/spaces/{{SPACE_ID}}/virtualGateways",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"connectivity",
+								"spaces",
+								"{{SPACE_ID}}",
+								"virtualGateways"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteVGW",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ENDPOINT}}/connectivity/spaces/{{SPACE_ID}}/virtualGateways/{{VIRTUAL_GATEWAY_ID}}",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"connectivity",
+								"spaces",
+								"{{SPACE_ID}}",
+								"virtualGateways",
+								"{{VIRTUAL_GATEWAY_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LinkVGW",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"vpcId\": \"{{VPC_ID}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ENDPOINT}}/connectivity/spaces/{{SPACE_ID}}/virtualGateways/{{VIRTUAL_GATEWAY_ID}}/link",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"connectivity",
+								"spaces",
+								"{{SPACE_ID}}",
+								"virtualGateways",
+								"{{VIRTUAL_GATEWAY_ID}}",
+								"link"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UnlinkVGW",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"vpcId\": \"{{VPC_ID}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ENDPOINT}}/connectivity/spaces/{{SPACE_ID}}/virtualGateways/{{VIRTUAL_GATEWAY_ID}}/link",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"connectivity",
+								"spaces",
+								"{{SPACE_ID}}",
+								"virtualGateways",
+								"{{VIRTUAL_GATEWAY_ID}}",
+								"link"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VPN",
+			"item": [
+				{
+					"name": "CreateVPN",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response=JSON.parse(pm.response.text())",
+									"pm.environment.set(\"VPN_ID\", response.id);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"clientGatewayId\": \"{{CLIENT_GATEWAY_ID}}\",\r\n  \"virtualGatewayId\": \"{{VIRTUAL_GATEWAY_ID}}\",\r\n  \"connectionType\": \"ipsec.1\",\r\n  \"staticRoutesOnly\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ENDPOINT}}/connectivity/spaces/{{SPACE_ID}}/vpnConnections",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"connectivity",
+								"spaces",
+								"{{SPACE_ID}}",
+								"vpnConnections"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SetKey",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response=JSON.parse(pm.response.text())",
+									"pm.environment.set(\"VPN_ID\", response.id);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Phase1Options\":{\r\n        \"Phase1LifetimeSeconds\":28800,\r\n        \"Phase1EncryptionAlgorithms\":[\"256-bit AES-CBC\"],\r\n        \"Phase1IntegrityAlgorithms\":[\"SHA2_256_128 HMAC\"],\r\n        \"Phase1DhGroupNumbers\":[16]\r\n    },\r\n    \"Phase2Options\":{\r\n        \"Phase2LifetimeSeconds\":3600,\r\n        \"Phase2EncryptionAlgorithms\":[\"256-bit AES-CBC\"],\r\n        \"Phase2IntegrityAlgorithms\":[\"SHA2_256_128 HMAC\"],\r\n        \"Phase2DhGroupNumbers\":[16],\r\n        \"PreSharedKey\":\"BGqaojJWkmK7aT8MwuJD\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ENDPOINT}}/connectivity/spaces/{{SPACE_ID}}/vpnConnections/{{VPN_ID}}",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"connectivity",
+								"spaces",
+								"{{SPACE_ID}}",
+								"vpnConnections",
+								"{{VPN_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteVPN",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{ENDPOINT}}/connectivity/spaces/{{SPACE_ID}}/vpnConnections/{{VPN_ID}}",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"connectivity",
+								"spaces",
+								"{{SPACE_ID}}",
+								"vpnConnections",
+								"{{VPN_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetVPN",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{ENDPOINT}}/connectivity/spaces/{{SPACE_ID}}/vpnConnections/{{VPN_ID}}",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"connectivity",
+								"spaces",
+								"{{SPACE_ID}}",
+								"vpnConnections",
+								"{{VPN_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListVPN",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{ENDPOINT}}/connectivity/spaces/{{SPACE_ID}}/vpnConnections",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"connectivity",
+								"spaces",
+								"{{SPACE_ID}}",
+								"vpnConnections"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "K8S",
+			"item": [
+				{
+					"name": "GetK8S",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ENDPOINT}}/kubernetes/spaces/{{SPACE_ID}}/clusters/{{CLUSTER_ID}}",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"kubernetes",
+								"spaces",
+								"{{SPACE_ID}}",
+								"clusters",
+								"{{CLUSTER_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListK8S",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var template = `",
+									"<style type=\"text/css\">",
+									"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}",
+									"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}",
+									"    .tftable tr {background-color:#ffffff;}",
+									"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}",
+									"    .tftable tr:hover {background-color:#e0ffff;}",
+									"</style>",
+									"",
+									"<table class=\"tftable\" border=\"1\">",
+									"    <tr>",
+									"        <th>ID</th>",
+									"        <th>Name</th>",
+									"    </tr>",
+									"    ",
+									"    {{#each response.items}}",
+									"        <tr>",
+									"            <td>{{id}}</td>",
+									"            <td>{{name}}</td>",
+									"        </tr>",
+									"    {{/each}}",
+									"</table>",
+									"`;",
+									"",
+									"function constructVisualizerPayload() {",
+									"    return {response: pm.response.json()}",
+									"}",
+									"",
+									"pm.visualizer.set(template, constructVisualizerPayload());"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{ENDPOINT}}/kubernetes/spaces/{{SPACE_ID}}/clusters",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"kubernetes",
+								"spaces",
+								"{{SPACE_ID}}",
+								"clusters"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VirtualMachine",
+			"item": [
+				{
+					"name": "GetWindowsPassword",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var template = `",
+									"<style type=\"text/css\">",
+									"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}",
+									"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}",
+									"    .tftable tr {background-color:#ffffff;}",
+									"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}",
+									"    .tftable tr:hover {background-color:#e0ffff;}",
+									"</style>",
+									"",
+									"<table class=\"tftable\" border=\"1\">",
+									"    <tr>",
+									"        <th>ID</th>",
+									"        <th>Architecture</th>",
+									"        <th>BSU Optimized</th>",
+									"        <th>Creation Date</th>",
+									"        <th>Deletion Protection</th>",
+									"        <th>Nested Virtualization</th>",
+									"        <th>Performance</th>",
+									"        <th>Private DNS Name</th>",
+									"        <th>Private IP</th>",
+									"        <th>State</th>",
+									"        <th>Subnet ID</th>",
+									"        <th>VPC ID</th>",
+									"    </tr>",
+									"    ",
+									"    {{#each response.items}}",
+									"        <tr id=row_{{@key}}>",
+									"            <td>{{id}}</td>",
+									"            <td>{{architecture}}</td>",
+									"            <td>{{bsuOptimized}}</td>",
+									"            <td>{{creationDate}}</td>",
+									"            <td>{{deletionProtection}}</td>",
+									"            <td>{{nestedVirtualization}}</td>",
+									"            <td>{{performance}}</td>",
+									"            <td>{{privateDnsName}}</td>",
+									"            <td>{{privateIp}}</td>",
+									"            <td>{{state}}</td>",
+									"            <td>{{subnetId}}</td>",
+									"            <td>{{vpcId}}</td>",
+									"        </tr>",
+									"    {{/each}}",
+									"</table>",
+									"`;",
+									"",
+									"function constructVisualizerPayload() {",
+									"    return {response: pm.response.json()}",
+									"}",
+									"",
+									"pm.visualizer.set(template, constructVisualizerPayload());"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ENDPOINT}}/compute/spaces/{{SPACE_ID}}/vms/{{VM_ID}}/adminPasswords",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"compute",
+								"spaces",
+								"{{SPACE_ID}}",
+								"vms",
+								"{{VM_ID}}",
+								"adminPasswords"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListVM",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var template = `",
+									"<style type=\"text/css\">",
+									"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}",
+									"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}",
+									"    .tftable tr {background-color:#ffffff;}",
+									"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}",
+									"    .tftable tr:hover {background-color:#e0ffff;}",
+									"</style>",
+									"",
+									"<table class=\"tftable\" border=\"1\">",
+									"    <tr>",
+									"        <th>ID</th>",
+									"        <th>Architecture</th>",
+									"        <th>BSU Optimized</th>",
+									"        <th>Creation Date</th>",
+									"        <th>Deletion Protection</th>",
+									"        <th>Nested Virtualization</th>",
+									"        <th>Performance</th>",
+									"        <th>Private DNS Name</th>",
+									"        <th>Private IP</th>",
+									"        <th>State</th>",
+									"        <th>Subnet ID</th>",
+									"        <th>VPC ID</th>",
+									"    </tr>",
+									"    ",
+									"    {{#each response.items}}",
+									"        <tr id=row_{{@key}}>",
+									"            <td>{{id}}</td>",
+									"            <td>{{architecture}}</td>",
+									"            <td>{{bsuOptimized}}</td>",
+									"            <td>{{creationDate}}</td>",
+									"            <td>{{deletionProtection}}</td>",
+									"            <td>{{nestedVirtualization}}</td>",
+									"            <td>{{performance}}</td>",
+									"            <td>{{privateDnsName}}</td>",
+									"            <td>{{privateIp}}</td>",
+									"            <td>{{state}}</td>",
+									"            <td>{{subnetId}}</td>",
+									"            <td>{{vpcId}}</td>",
+									"        </tr>",
+									"    {{/each}}",
+									"</table>",
+									"`;",
+									"",
+									"function constructVisualizerPayload() {",
+									"    return {response: pm.response.json()}",
+									"}",
+									"",
+									"pm.visualizer.set(template, constructVisualizerPayload());"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ENDPOINT}}/compute/spaces/{{SPACE_ID}}/vms",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"compute",
+								"spaces",
+								"{{SPACE_ID}}",
+								"vms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StartVM",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ENDPOINT}}/compute/spaces/{{SPACE_ID}}/vms/{{VM_ID}}/start",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"compute",
+								"spaces",
+								"{{SPACE_ID}}",
+								"vms",
+								"{{VM_ID}}",
+								"start"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StopVM",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"forceStop\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ENDPOINT}}/compute/spaces/{{SPACE_ID}}/vms/{{VM_ID}}/stop",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"compute",
+								"spaces",
+								"{{SPACE_ID}}",
+								"vms",
+								"{{VM_ID}}",
+								"stop"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateVM",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"keypairName\": \"keypair1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ENDPOINT}}/compute/spaces/{{SPACE_ID}}/vms/{{VM_ID}}",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"compute",
+								"spaces",
+								"{{SPACE_ID}}",
+								"vms",
+								"{{VM_ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Route",
+			"item": [
+				{
+					"name": "CreateRoute",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"destinationIpRange\": \"10.0.0.0/24\",\n    \"gatewayId\": \"{{VIRTUAL_GATEWAY_ID}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ENDPOINT}}/compute/spaces/{{SPACE_ID}}/routeTables/{{ROUTE_TABLE_ID}}/routes",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"compute",
+								"spaces",
+								"{{SPACE_ID}}",
+								"routeTables",
+								"{{ROUTE_TABLE_ID}}",
+								"routes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListRoute",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ENDPOINT}}/compute/spaces/{{SPACE_ID}}/routeTables/{{ROUTE_TABLE_ID}}",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"compute",
+								"spaces",
+								"{{SPACE_ID}}",
+								"routeTables",
+								"{{ROUTE_TABLE_ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SecurityGroup",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ENDPOINT}}/compute/spaces/{{SPACE_ID}}/securityGroups",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"compute",
+								"spaces",
+								"{{SPACE_ID}}",
+								"securityGroups"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VPC",
+			"item": [
+				{
+					"name": "GetVPC",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ENDPOINT}}/compute/spaces/{{SPACE_ID}}/vpcs/{{VPC_ID}}",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"compute",
+								"spaces",
+								"{{SPACE_ID}}",
+								"vpcs",
+								"{{VPC_ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "getToken",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response=JSON.parse(pm.response.text())",
+							"pm.environment.set(\"ACCESS_TOKEN\", response.access_token);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{SVC_ACCOUNT_SECRET}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{SVC_ACCOUNT_KEY}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "openid+offline",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{ENDPOINT}}/iam/token",
+					"host": [
+						"{{ENDPOINT}}"
+					],
+					"path": [
+						"iam",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListSpaces",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var template = `",
+							"<style type=\"text/css\">",
+							"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}",
+							"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}",
+							"    .tftable tr {background-color:#ffffff;}",
+							"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}",
+							"    .tftable tr:hover {background-color:#e0ffff;}",
+							"</style>",
+							"",
+							"<table class=\"tftable\" border=\"1\">",
+							"    <tr>",
+							"        <th>ID</th>",
+							"        <th>Name</th>",
+							"        <th>Description</th>",
+							"        <th>Status</th>",
+							"        <th>Created On</th>",
+							"        <th>Updated On</th>",
+							"    </tr>",
+							"    ",
+							"    {{#each response.items}}",
+							"        <tr>",
+							"            <td>{{id}}</td>",
+							"            <td>{{name}}</td>",
+							"            <td>{{description}}</td>",
+							"            <td>{{status}}</td>",
+							"            <td>{{createdOn}}</td>",
+							"            <td>{{updatedOn}}</td>",
+							"        </tr>",
+							"    {{/each}}",
+							"</table>",
+							"`;",
+							"",
+							"function constructVisualizerPayload() {",
+							"    return {response: pm.response.json()}",
+							"}",
+							"",
+							"pm.visualizer.set(template, constructVisualizerPayload());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ACCESS_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{ENDPOINT}}/organisations/{{ORGANIZATION_ID}}/spaces",
+					"host": [
+						"{{ENDPOINT}}"
+					],
+					"path": [
+						"organisations",
+						"{{ORGANIZATION_ID}}",
+						"spaces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListOrganisations",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var template = `",
+							"<style type=\"text/css\">",
+							"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}",
+							"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}",
+							"    .tftable tr {background-color:#ffffff;}",
+							"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}",
+							"    .tftable tr:hover {background-color:#e0ffff;}",
+							"</style>",
+							"",
+							"<table class=\"tftable\" border=\"1\">",
+							"    <tr>",
+							"        <th>ID</th>",
+							"        <th>Name</th>",
+							"    </tr>",
+							"    ",
+							"    {{#each response.items}}",
+							"        <tr>",
+							"            <td>{{id}}</td>",
+							"            <td>{{name}}</td>",
+							"        </tr>",
+							"    {{/each}}",
+							"</table>",
+							"`;",
+							"",
+							"function constructVisualizerPayload() {",
+							"    return {response: pm.response.json()}",
+							"}",
+							"",
+							"pm.visualizer.set(template, constructVisualizerPayload());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ACCESS_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{ENDPOINT}}/iam/organisations/",
+					"host": [
+						"{{ENDPOINT}}"
+					],
+					"path": [
+						"iam",
+						"organisations",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RoutePropagation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ACCESS_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"enable\": true,\n  \"virtualGatewayId\": \"{{VIRTUAL_GATEWAY_ID}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ENDPOINT}}/compute/spaces/{{SPACE_ID}}/routeTables/{{ROUTE_TABLE_ID}}/routePropagation",
+					"host": [
+						"{{ENDPOINT}}"
+					],
+					"path": [
+						"compute",
+						"spaces",
+						"{{SPACE_ID}}",
+						"routeTables",
+						"{{ROUTE_TABLE_ID}}",
+						"routePropagation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListRouteTable",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ACCESS_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{ENDPOINT}}/compute/spaces/{{SPACE_ID}}/routeTables",
+					"protocol": "https",
+					"host": [
+						"{{ENDPOINT}}"
+					],
+					"path": [
+						"compute",
+						"spaces",
+						"{{SPACE_ID}}",
+						"routeTables"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateVpnConnectionsRoutes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ACCESS_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"destinationIpRange\": \"10.0.0.0/24\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ENDPOINT}}/connectivity/spaces/{{SPACE_ID}}/vpnConnections/{{VPN_ID}}/routes",
+					"host": [
+						"{{ENDPOINT}}"
+					],
+					"path": [
+						"connectivity",
+						"spaces",
+						"{{SPACE_ID}}",
+						"vpnConnections",
+						"{{VPN_ID}}",
+						"routes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
