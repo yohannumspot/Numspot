@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash 
 
 set -eo pipefail  # Stop script execution on error, including piped commands
 
@@ -114,10 +114,10 @@ main() {
 
     if [[ "$(uname)" == "Darwin" ]]; then
         # macOS (BSD sed)
-        sed -i '' "s|$API_URL|127.0.0.1|g" $KUBECONFIG_PATH ||  error_exit "Failed to patch kubeconfig : $KUBECONFIG_PATH"
+        sed -i '' "s|server: https://[0-9.]*:6443|server: https://127.0.0.1:6443|g" $KUBECONFIG_PATH ||  error_exit "Failed to patch kubeconfig : $KUBECONFIG_PATH"
     else
         # Linux (GNU sed)
-        sed -i "s|$API_URL|127.0.0.1|g" $KUBECONFIG_PATH || error_exit "Failed to patch kubeconfig : $KUBECONFIG_PATH"
+        sed -i "s|server: https://[0-9.]*:6443|server: https://127.0.0.1:6443|g" $KUBECONFIG_PATH ||  error_exit "Failed to patch kubeconfig : $KUBECONFIG_PATH"
     fi
 
     log "SUCCESS" "Kubeconfig downloaded and patched!"
